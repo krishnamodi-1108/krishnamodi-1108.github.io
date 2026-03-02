@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krishna Modi | Software Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .gradient-text {
+            background: linear-gradient(90deg, #60a5fa, #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .experience-card:hover { transform: translateY(-5px); transition: all 0.3s ease; }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200">
+
+    <nav class="fixed w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <span class="text-xl font-bold gradient-text tracking-tighter">KRISHNA MODI</span>
+            <div class="space-x-8 hidden md:block text-sm font-medium">
+                <a href="#experience" class="hover:text-blue-400 transition">Experience</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pt-32 pb-20 px-6 text-center">
+        <div class="max-w-5xl mx-auto">
+            <div class="inline-block px-4 py-1.5 mb-6 border border-blue-500/30 rounded-full bg-blue-500/10 text-blue-400 text-xs font-bold uppercase tracking-widest">
+                <i class="fas fa-certificate mr-2"></i> AWS Certified Cloud Practitioner
+            </div>
+            <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Krishna <span class="gradient-text">Modi</span></h1>
+            <p class="text-xl text-slate-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                Software Engineer with 3.5+ years of experience at <span class="text-white font-semibold">J.P. Morgan Chase</span>. 
+                Specializing in <span class="text-blue-400 underline decoration-2 underline-offset-4">Spring Boot, Kafka, and Microservices</span>.
+            </p>
+            <div class="flex justify-center gap-6 text-2xl">
+                <a href="https://github.com/krishnamodi-1108" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/krishna-modi-116a94185" target="_blank" class="text-slate-400 hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <section id="experience" class="py-20 bg-slate-800/30">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                <span class="h-px w-12 bg-blue-500"></span> Professional Experience
+            </h2>
+            <div class="space-y-12">
+                <div class="relative pl-8 border-l-2 border-slate-700 experience-card">
+                    <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-blue-500 shadow-[0_0_10px_#3b82f6]"></div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-white">Software Engineer</h3>
+                        <span class="text-sm text-slate-500 font-mono">Sep 2022 — Present</span>
+                    </div>
+                    <p class="text-blue-400 font-semibold mb-4">J.P. Morgan Chase & Co. | Bangalore</p>
+                    <ul class="text-slate-400 space-y-3 text-sm">
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Optimized critical code flows, achieving a 20% improvement in performance.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Led Kafka Cluster migrations with zero downtime.</li>
+                        <li><i class="fas fa-check text-blue-500 mr-2 text-xs"></i> Mentored new joiners on system architecture and debugging.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12">Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 text-left">
+                
+                <div onclick="openModal('modal-batch')" class="cursor-pointer bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all group">
+                    <div class="p-2 bg-blue-500/10 rounded-lg w-fit mb-4"><i class="fas fa-database text-blue-500"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">Spring Batch Records</h3>
+                    <p class="text-slate-400 text-xs mb-4">Processing millions of financial records daily with high reliability.</p>
+                    <span class="text-[10px] font-bold text-blue-400 uppercase">Click for Details</span>
+                </div>
+
+                <div onclick="openModal('modal-kafka')" class="cursor-pointer bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-red-500 transition-all group">
+                    <div class="p-2 bg-red-500/10 rounded-lg w-fit mb-4"><i class="fas fa-stream text-red-500"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">Kafka Migration Lead</h3>
+                    <p class="text-slate-400 text-xs mb-4">Refactored code for cluster migration and host modernization.</p>
+                    <span class="text-[10px] font-bold text-red-400 uppercase">Click for Details</span>
+                </div>
+
+                <div onclick="openModal('modal-pbs1')" class="cursor-pointer bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-yellow-500 transition-all group">
+                    <div class="p-2 bg-yellow-500/10 rounded-lg w-fit mb-4"><i class="fas fa-rocket text-yellow-500"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">PBS1 Modernization</h3>
+                    <p class="text-slate-400 text-xs mb-4">System migration to Java 17 and JUnit 5 standards.</p>
+                    <span class="text-[10px] font-bold text-yellow-400 uppercase">Click for Details</span>
+                </div>
+
+                <div onclick="openModal('modal-catalog')" class="cursor-pointer bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-purple-500 transition-all group">
+                    <div class="p-2 bg-purple-500/10 rounded-lg w-fit mb-4"><i class="fas fa-server text-purple-500"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">Catalog Microservice</h3>
+                    <p class="text-slate-400 text-xs mb-4">Distributed management system with Eureka Discovery.</p>
+                    <span class="text-[10px] font-bold text-purple-400 uppercase">Click for Details</span>
+                </div>
+
+                <div onclick="openModal('modal-hospital')" class="cursor-pointer bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-emerald-500 transition-all group">
+                    <div class="p-2 bg-emerald-500/10 rounded-lg w-fit mb-4"><i class="fas fa-hospital text-emerald-500"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">Hospital Mgmt System</h3>
+                    <p class="text-slate-400 text-xs mb-4">Fullstack Spring Boot project with Layered Architecture.</p>
+                    <span class="text-[10px] font-bold text-emerald-400 uppercase">Click for Details</span>
+                </div>
+
+                <div onclick="openModal('modal-email')" class="cursor-pointer bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-orange-500 transition-all group">
+                    <div class="p-2 bg-orange-500/10 rounded-lg w-fit mb-4"><i class="fas fa-envelope-open-text text-orange-500"></i></div>
+                    <h3 class="text-lg font-bold text-white mb-2">Email Automation</h3>
+                    <p class="text-slate-400 text-xs mb-4">Python and Pandas based personalized newsfeed utility.</p>
+                    <span class="text-[10px] font-bold text-orange-400 uppercase">Click for Details</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-overlay" class="hidden fixed inset-0 bg-black/90 backdrop-blur-md z-[100] flex items-center justify-center p-6 text-left">
+        
+        <div id="modal-batch" class="hidden bg-slate-900 border border-slate-700 max-w-2xl w-full p-8 rounded-3xl relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white"><i class="fas fa-times text-2xl"></i></button>
+            <h3 class="text-2xl font-bold mb-4 text-blue-400">Spring Batch & Reliability</h3>
+            <p class="text-slate-300 mb-6">Implemented Spring Batch jobs to process millions of financial records daily with minimal memory overhead and zero data loss.</p>
+            <ul class="text-slate-400 text-sm space-y-2">
+                <li>• Automated error tracking and re-processing.</li>
+                <li>• Reduced manual intervention by 30%.</li>
+                <li>• Integrated Splunk for real-time monitoring.</li>
+            </ul>
+        </div>
+
+        <div id="modal-kafka" class="hidden bg-slate-900 border border-slate-700 max-w-2xl w-full p-8 rounded-3xl relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white"><i class="fas fa-times text-2xl"></i></button>
+            <h3 class="text-2xl font-bold mb-4 text-red-500">Kafka Migration Initiative</h3>
+            <p class="text-slate-300 mb-6">Led the migration of Kafka clusters across multiple applications at JPMC.</p>
+            <ul class="text-slate-400 text-sm space-y-2">
+                <li>• Refactored project code to support new cluster hosts.</li>
+                <li>• Ensured zero downtime during high-traffic periods.</li>
+                <li>• Enabled scalable, decoupled message-driven architecture.</li>
+            </ul>
+        </div>
+
+        <div id="modal-pbs1" class="hidden bg-slate-900 border border-slate-700 max-w-2xl w-full p-8 rounded-3xl relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white"><i class="fas fa-times text-2xl"></i></button>
+            <h3 class="text-2xl font-bold mb-4 text-yellow-500">App Modernization (PBS1)</h3>
+            <p class="text-slate-300 mb-6">Modernized the PBS1 project to Java 17 standards.</p>
+            <ul class="text-slate-400 text-sm space-y-2">
+                <li>• JUnit 4 to JUnit 5 migration for better testing.</li>
+                <li>• Reduced technical debt and improved code maintainability.</li>
+                <li>• Enhanced performance through Java 17 features.</li>
+            </ul>
+        </div>
+
+        <div id="modal-catalog" class="hidden bg-slate-900 border border-slate-700 max-w-2xl w-full p-8 rounded-3xl relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white"><i class="fas fa-times text-2xl"></i></button>
+            <h3 class="text-2xl font-bold mb-4 text-purple-400">Catalog Microservice</h3>
+            <p class="text-slate-300 mb-6">Built with Spring Boot and Eureka Discovery for high availability.</p>
+            <a href="https://github.com/krishnamodi-1108/Catalog-Service-Project" target="_blank" class="bg-purple-600 px-6 py-2 rounded-full text-sm inline-block font-bold">GitHub Link</a>
+        </div>
+
+        <div id="modal-hospital" class="hidden bg-slate-900 border border-slate-700 max-w-2xl w-full p-8 rounded-3xl relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white"><i class="fas fa-times text-2xl"></i></button>
+            <h3 class="text-2xl font-bold mb-4 text-emerald-400">Hospital Mgmt System</h3>
+            <p class="text-slate-300 mb-6">Developed during Wiley Edge internship using Controller-Service-DAO pattern.</p>
+            <a href="https://github.com/krishnamodi-1108/Hospital-Management-System-MVC" target="_blank" class="bg-emerald-600 px-6 py-2 rounded-full text-sm inline-block font-bold">GitHub Link</a>
+        </div>
+
+        <div id="modal-email" class="hidden bg-slate-900 border border-slate-700 max-w-2xl w-full p-8 rounded-3xl relative">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-slate-500 hover:text-white"><i class="fas fa-times text-2xl"></i></button>
+            <h3 class="text-2xl font-bold mb-4 text-orange-500">Python Email Automation</h3>
+            <p class="text-slate-300 mb-6">Automates newsfeed delivery based on user preferences.</p>
+            <ul class="text-slate-400 text-sm space-y-2">
+                <li>• Built using Python and Pandas.</li>
+                <li>• Supports scheduled intervals and personalization.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById('modal-overlay').classList.remove('hidden');
+            document.getElementById(id).classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.add('hidden');
+            const modals = document.querySelectorAll('#modal-overlay > div');
+            modals.forEach(m => m.classList.add('hidden'));
+            document.body.style.overflow = 'auto';
+        }
+        document.getElementById('modal-overlay').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+    </script>
+
+	
+	<section id="skills" class="py-20 bg-slate-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 flex items-center gap-4">
+                <span class="h-px w-12 bg-blue-500"></span> Technical Toolbox
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="p-6 bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-blue-500/50 transition-colors">
+                    <div class="text-blue-500 mb-4"><i class="fas fa-code text-3xl"></i></div>
+                    <h3 class="text-white font-bold mb-2">Languages</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Java, Python , C++, JavaScript (Basic React) </p>
+                </div>
+
+                <div class="p-6 bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-purple-500/50 transition-colors">
+                    <div class="text-purple-500 mb-4"><i class="fas fa-server text-3xl"></i></div>
+                    <h3 class="text-white font-bold mb-2">Backend</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Spring Boot, Spring Batch, Apache Kafka , RESTful APIs </p>
+                </div>
+
+                <div class="p-6 bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-emerald-500/50 transition-colors">
+                    <div class="text-emerald-500 mb-4"><i class="fas fa-cloud text-3xl"></i></div>
+                    <h3 class="text-white font-bold mb-2">Infrastructure</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">AWS , Kubernetes, JUnit5, Cucumber , GitHub/BitBucket </p>
+                </div>
+
+                <div class="p-6 bg-slate-800/50 border border-slate-700 rounded-2xl hover:border-orange-500/50 transition-colors">
+                    <div class="text-orange-500 mb-4"><i class="fas fa-chart-line text-3xl"></i></div>
+                    <h3 class="text-white font-bold mb-2">Monitoring</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">Splunk, Grafana, Dynatrace , Jira, Autosys </p>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-600/10 to-purple-600/10 border border-blue-500/20 rounded-3xl p-8 flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-6 text-left">
+                    <div class="h-16 w-16 bg-white rounded-lg flex items-center justify-center shadow-lg">
+                        <i class="fab fa-aws text-4xl text-orange-500"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">AWS Certified Cloud Practitioner</h4>
+                        <p class="text-blue-400 text-sm">Validation of overall understanding of the AWS Cloud platform. </p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 text-left">
+                    <div class="h-16 w-16 bg-blue-600 rounded-lg flex items-center justify-center shadow-lg">
+                        <i class="fas fa-certificate text-3xl text-white"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold text-white">Software Engineering Internship</h4>
+                        <p class="text-slate-400 text-sm">Wiley Edge | 2022 </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	<section id="contact" class="py-24 bg-slate-800/20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-slate-800 border border-slate-700 rounded-[3rem] p-12 text-center shadow-2xl relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-purple-600/10 rounded-full blur-3xl"></div>
+
+                <div class="relative z-10">
+                    <h2 class="text-4xl font-bold mb-6">Let's build something <span class="gradient-text">Scalable</span>.</h2>
+                    <p class="text-slate-400 text-lg mb-12 max-w-2xl mx-auto">
+                        I am currently open to new opportunities and collaborations in 
+                        <span class="text-white">Backend Engineering, Distributed Systems, and Cloud Infrastructure</span>. 
+                        Whether you have a question or just want to say hi, my inbox is always open!
+                    </p>
+
+                    <div class="grid md:grid-cols-3 gap-8 mb-12">
+                        <a href="mailto:krishnamodi41423@gmail.com" class="p-6 bg-slate-900 rounded-2xl border border-slate-700 hover:border-blue-500 transition-all group">
+                            <div class="text-blue-500 text-2xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-envelope"></i></div>
+                            <h4 class="text-white font-bold mb-1">Email Me</h4>
+                            <p class="text-slate-500 text-xs truncate">krishnamodi41423@gmail.com</p>
+                        </a>
+
+                        <a href="https://linkedin.com/in/krishna-modi-116a94185" target="_blank" class="p-6 bg-slate-900 rounded-2xl border border-slate-700 hover:border-blue-400 transition-all group">
+                            <div class="text-blue-400 text-2xl mb-4 group-hover:scale-110 transition-transform"><i class="fas fa-link"></i></div>
+                            <h4 class="text-white font-bold mb-1">LinkedIn</h4>
+                            <p class="text-slate-500 text-xs">Connect Professionally</p>
+                        </a>
+
+                        <div class="p-6 bg-slate-900 rounded-2xl border border-slate-700">
+                            <div class="text-emerald-500 text-2xl mb-4"><i class="fas fa-map-marker-alt"></i></div>
+                            <h4 class="text-white font-bold mb-1">Location</h4>
+                            <p class="text-slate-500 text-xs">Bangalore, India</p>
+                        </div>
+                    </div>
+
+                    <a href="mailto:krishna.modi@jpmchase.com" class="inline-flex items-center gap-3 bg-blue-600 hover:bg-blue-700 text-white font-bold px-10 py-4 rounded-full transition-all hover:scale-105 active:scale-95 shadow-lg shadow-blue-600/20">
+                        <i class="fas fa-paper-plane"></i> Send a Message
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+	
+	
+
+    <footer class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
+        <p>© 2026 Krishna Modi • Engineering for Stability</p>
+    </footer>
+
+</body>
+</html>
